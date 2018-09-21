@@ -10,6 +10,7 @@ get ("/about") do
 end
 
 get ("/index") do
+  @contact_collection = Contact.all
   erb :index
 end
 

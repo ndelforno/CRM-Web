@@ -1,3 +1,7 @@
-<h1>Welcome to My CRM</h1>
 
-<a href="/contacts"> Go to contacts</a>
+<h3>There are <%= @contact_collection.length %> contacts </h3>
+
+<% @contact_collection.each do |contact| %>
+  <li> <%= contact.full_name %> (<%= contact.email %>)</li>
+  <a href="#">Edit</a>|<a href="#">Delete</a>
+  <% end %>
