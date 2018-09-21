@@ -1,5 +1,48 @@
 h1 {
   color: white;
-  background-color: black
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
 
+header{
+  background-color: #d1cbca;
+}
+
+
+li {
+  list-style-type: none;
+}
+.navbar {
+  display: block;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+}
+
+.contact {
+  background-color: #42f4df;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  border-bottom: 5px solid white;
+  font-weight: bold;
+}
+
+h3 {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #ed7c68
+}
+
+footer {
+  padding:10px;
+  color: white;
+  background-color: black;
+  text-align: center;
 }
