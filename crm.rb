@@ -83,13 +83,13 @@ delete '/contacts/:id' do
   end
 end
 
-get '/index/search/:first_name' do
+get '/index/search' do
   p params[:first_name]
-  @contact = Contact.find_by(first_name: params[:first_name])
-  if @contact
-    erb :edit_contact
+  @contact_collection =[]
+  @contact_collection << Contact.find_by(first_name: params[:first_name].to_s)
+  if @contact_collection
+    erb :contacts
   else
-    puts "Contact does not exist"
     raise Sinatra::NotFound
   end
 end
