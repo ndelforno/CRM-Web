@@ -3,9 +3,17 @@
 <h3>There are <%= @contact_collection.length %> contacts </h3>
 
 <% @contact_collection.each do |contact| %>
-  <li class = "contact">
+  <div class = "contact">
     <a href="/contacts/<%= contact.id %>">
-    <%= contact.full_name %> <%= contact.email %> <%= contact.note%>
+    <li> <%= contact.full_name %> (<%= contact.email %>)</li>
     </a>
-  </li>
+    <form action="/contacts/<%= contact.id %>/edit" method="get">
+      <input type="submit" value="Edit Contact">
+    </form>
+    <form action="/contacts/<%= contact.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete Contact">
+    </form>
+  </div>
+
   <% end %>
