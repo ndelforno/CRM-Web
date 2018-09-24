@@ -4,6 +4,6 @@
 <% @contact_collection.each do |contact| %>
   <div class = "contact">
   <li> <%= contact.full_name %> (<%= contact.email %>)</li>
-  <a href="#">Edit</a> | <a href="#">Delete</a>
+  <a href="/contacts/<%= contact.id %>/edit">Edit</a> | <a href="#">Delete</a>
   </div>
   <% end %>
